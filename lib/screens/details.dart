@@ -4,7 +4,8 @@ import '../util/places.dart';
 import '../widgets/icon_badge.dart';
 
 class Details extends StatelessWidget {
-  const Details({super.key});
+  final int index;
+  const Details({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +46,7 @@ class Details extends StatelessWidget {
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "${places[0]["name"]}",
+                      "${places[index]["name"]}",
                       style: const TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 20,
@@ -75,7 +76,7 @@ class Details extends StatelessWidget {
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "${places[0]["location"]}",
+                      "${places[index]["location"]}",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 13,
@@ -91,7 +92,7 @@ class Details extends StatelessWidget {
               Container(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "${places[0]["price"]}",
+                  "${places[index]["price"]}",
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 17,
@@ -118,7 +119,7 @@ class Details extends StatelessWidget {
               Container(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "${places[0]["details"]}",
+                  "${places[index]["details"]}",
                   style: const TextStyle(
                     fontWeight: FontWeight.normal,
                     fontSize: 15.0,
